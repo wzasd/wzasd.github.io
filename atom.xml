@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-03T05:56:32.245Z</updated>
+  <updated>2017-01-03T10:01:32.843Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不算总结的总结</title>
+    <link href="http://yoursite.com/2017/01/04/2016%E4%B8%8D%E7%AE%97%E6%80%BB%E7%BB%93%E7%9A%84%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/01/04/2016不算总结的总结/</id>
+    <published>2017-01-03T17:56:58.000Z</published>
+    <updated>2017-01-03T10:01:32.843Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/winde.jpg" alt="冬天"><br>其实早就想写关于2016年的总结，但是懒癌毕竟是难治一直没有写，况且年终受到了惊吓，如今终于平复，希望可以平平常常写下这年终总结。</p>
+<p>事情就像是一篇没有写完的代码，框架已经打好，只是内容繁琐又复杂，本就没有头绪这就又增添一种神秘感，那就由近到远的诉说好了。</p>
+<p>应该记录的是公司年会，从没想到来到一个公司不到一个月的时间，能这么融洽的融到公司里面，和这个team有不可脱离的关系，不说工作，氛围满分。不知道多久多久，或者从未有过跟一个朋友能聊一个晚上，我是有多么惊讶，如此的热情，也就你能拥有了，我想这就是所谓的感染力，从Breakdown到Excitation，这种可能性被无限的放大，It’s amazing，但是这才是真的你不是吗？有两个词倒是让我记到现在，bitch and Stronger mate. 这是一个神奇的称呼，也是不同的自己的体现不是吗？Just do it!Whether successful or not,who care?</p>
+<p>来到公司前也同样有一种生活，也许今年的波折有一点多，突然有一种爆炸的感觉，从一个被称之为天堂的地方，另外一个朝九晚五的地方，跳出来，需要多大的勇气？原来曾经自己也是一个挺安稳安逸的样子，有时候会觉得安稳是一种幸福，但是为什么又是那么不安呢？太着急总是令人烦躁，尽人事，知天命，若是人事都没有尽如何而来知天命呢？我们都辜负了自己而已，所有的苦难并不是我遇到的会让我多么狼狈，而是我辜负了自己。罢了，哪怕是咸鱼，也要翻一下，这样才会更加美味不是吗？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/winde.jpg&quot; alt=&quot;冬天&quot;&gt;&lt;br&gt;其实早就想写关于2016年的总结，但是懒癌毕竟是难治一直没有写，况且年终受到了惊吓，如今终于平复，希望可以平平常常写下这年终总结。&lt;/p&gt;
+&lt;p&gt;事情就像是一篇没有写完的代码，框架已经打好，
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从零开始React项目(一)</title>
     <link href="http://yoursite.com/2017/01/03/MarketSmithWeb%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
     <id>http://yoursite.com/2017/01/03/MarketSmithWeb架构设计/</id>
     <published>2017-01-03T13:45:40.000Z</published>
-    <updated>2017-01-03T05:56:32.245Z</updated>
+    <updated>2017-01-03T10:03:58.106Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/redux.png" alt="redux"><br>进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。</p>
 <a id="more"></a>
@@ -224,8 +249,7 @@ config.module.loaders.push({
   test: /\.(scss|css)$/,
   loaders: [&apos;style&apos;, &apos;css&apos;, &apos;sass&apos;]
 });
-</code></pre><p>###自动引入静态资源到相应 html 页面</p>
-<ul>
+</code></pre><h3 id="自动引入静态资源到相应-html-页面"><a href="#自动引入静态资源到相应-html-页面" class="headerlink" title="自动引入静态资源到相应 html 页面"></a>自动引入静态资源到相应 html 页面</h3><ul>
 <li><p>使用 <a href="https://github.com/ampedandwired/html-webpack-plugin" target="_blank" rel="external">html-webpack-plugin</a></p>
 <pre><code>$ npm i html-webpack-plugin --save-dev
 </code></pre></li>
@@ -242,8 +266,7 @@ config.plugins.push(
 );
 </code></pre><p>至此，整个项目就可以正常跑起来了</p>
 <pre><code>$ node build/webpack.dev.js
-</code></pre><p>###实时编译和刷新浏览器</p>
-<p>完成前面的配置后，项目就已经可以实时编译和自动刷新浏览器了。接下来就配置下热更新，使用 <a href="https://github.com/gaearon/react-hot-loader" target="_blank" rel="external">react-hot-loader</a>：</p>
+</code></pre><h3 id="实时编译和刷新浏览器"><a href="#实时编译和刷新浏览器" class="headerlink" title="实时编译和刷新浏览器"></a>实时编译和刷新浏览器</h3><p>完成前面的配置后，项目就已经可以实时编译和自动刷新浏览器了。接下来就配置下热更新，使用 <a href="https://github.com/gaearon/react-hot-loader" target="_blank" rel="external">react-hot-loader</a>：</p>
 <pre><code>$ npm i react-hot-loader --save-dev
 </code></pre><p>因为热更新只需要在开发时使用，所以在 webpack.dev.config 里添加如下代码：</p>
 <pre><code>// 开启热替换相关设置
@@ -255,8 +278,7 @@ if (hot === true) {
 }
 </code></pre><p>执行下面的命令，并尝试更改 js、css：</p>
 <pre><code>$ node build/webpack.dev.js --hot
-</code></pre><p>###自动给 css 添加浏览器内核前缀</p>
-<p>使用 <a href="https://github.com/postcss/postcss-loader" target="_blank" rel="external">postcss-loader</a></p>
+</code></pre><h3 id="自动给-css-添加浏览器内核前缀"><a href="#自动给-css-添加浏览器内核前缀" class="headerlink" title="自动给 css 添加浏览器内核前缀"></a>自动给 css 添加浏览器内核前缀</h3><p>使用 <a href="https://github.com/postcss/postcss-loader" target="_blank" rel="external">postcss-loader</a></p>
 <pre><code>npm i postcss-loader precss autoprefixer --save-dev
 </code></pre><p>在 webpack.config.js 里添加：</p>
 <pre><code>// 编译 sass
@@ -271,8 +293,7 @@ var autoprefixer = require(&apos;autoprefixer&apos;);
 config.postcss = function() {
   return [precss, autoprefixer];
 }
-</code></pre><p>###打包合并 js、css</p>
-<p>webpack 默认将所有模块都打包成一个 bundle，并提供了 <a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">Code Splitting</a> 功能便于我们按需拆分。在这个例子里我们把框架和库都拆分出来：</p>
+</code></pre><h3 id="打包合并-js、css"><a href="#打包合并-js、css" class="headerlink" title="打包合并 js、css"></a>打包合并 js、css</h3><p>webpack 默认将所有模块都打包成一个 bundle，并提供了 <a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">Code Splitting</a> 功能便于我们按需拆分。在这个例子里我们把框架和库都拆分出来：</p>
 <p>在 webpack.config.js 添加：</p>
 <pre><code>config.entry.lib = [
   &apos;react&apos;, &apos;react-dom&apos;, &apos;react-router&apos;,
