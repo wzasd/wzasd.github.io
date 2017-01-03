@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>从零开始React项目 | Jeffrey for it</title>
+  <title>从零开始React项目(一) | Jeffrey for it</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。
-###项目结构的设计    build    |– webpack.config.js               # 公共配置    |– webpack.dev.js                  #">
+  <meta name="description" content="进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始React项目">
+<meta property="og:title" content="从零开始React项目(一)">
 <meta property="og:url" content="http://yoursite.com/2017/01/03/MarketSmithWeb架构设计/index.html">
 <meta property="og:site_name" content="Jeffrey for it">
-<meta property="og:description" content="进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。
-###项目结构的设计    build    |– webpack.config.js               # 公共配置    |– webpack.dev.js                  #">
-<meta property="og:updated_time" content="2017-01-03T05:47:19.705Z">
+<meta property="og:description" content="进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。">
+<meta property="og:image" content="http://yoursite.com/images/redux.png">
+<meta property="og:updated_time" content="2017-01-03T05:56:32.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始React项目">
-<meta name="twitter:description" content="进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。
-###项目结构的设计    build    |– webpack.config.js               # 公共配置    |– webpack.dev.js                  #">
+<meta name="twitter:title" content="从零开始React项目(一)">
+<meta name="twitter:description" content="进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。">
+<meta name="twitter:image" content="http://yoursite.com/images/redux.png">
   
     <link rel="alternative" href="/atom.xml" title="Jeffrey for it" type="application/atom+xml">
   
@@ -177,7 +176,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      从零开始React项目
+      从零开始React项目(一)
     </h1>
   
 
@@ -188,10 +187,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。</p>
-<p>###项目结构的设计<br>    build<br>    |– webpack.config.js               # 公共配置<br>    |– webpack.dev.js                  # 开发配置<br>    |– webpack.release.js              # 发布配置<br>    docs                                # 项目文档<br>    node_modules<br>    src                                 # 项目源码<br>    |– actions                            # redux Action组件<br>    |– components                        # react Comonents组件<br>    |– constants                        # react Containers组件<br>    |– conf                            # 配置文件<br>    |– services                        # 服务api<br>    |– fonts                             # 字体<br>    |– components                      # 组件目录<br>    |   |– loading<br>    |   |   |– index.js<br>    |   |   |– index.scss<br>    |   |   |– <strong>tests</strong><br>    |   |   |   |– xx.js<br>    |– actions<br>    |   |   |– index.js<br>    |   |   |– <strong>tests</strong><br>    |   |   |   |– xx.js<br>    |– reducers<br>    |   |– index.js<br>    |   |– <strong>tests</strong><br>    |   |   |– xx.js<br>    |   |– xx.js<br>    |– styles                             # 公共CSS目录<br>    |   |– common.scss<br>    |– img                             # 公共图片目录<br>    |   |– xx.png<br>    tests                               # 其他测试文件<br>    app.html                    # 入口页<br>    app.js                      # 入口JS<br>    package.json<br>    READNE.md</p>
-<p>###要完成的任务</p>
-<ol>
+        <p><img src="/images/redux.png" alt="redux"><br>进入Williamoneil已经有近一个月了，项目基本落地，Web端框架的技术选型也已完备，记录一下自己做的努力，然后以备以后项目需要，可以快速开始而且，并持续根据自己的知识储备进行优化。</p>
+<a id="more"></a>
+<h3 id="项目结构的设计"><a href="#项目结构的设计" class="headerlink" title="项目结构的设计"></a>项目结构的设计</h3><pre><code>build
+|-- webpack.config.js               # 公共配置
+|-- webpack.dev.js                  # 开发配置
+|-- webpack.release.js              # 发布配置
+docs                                # 项目文档
+node_modules                        
+src                                 # 项目源码
+|-- actions                            # redux Action组件
+|-- components                        # react Comonents组件
+|-- constants                        # react Containers组件
+|-- conf                            # 配置文件
+|-- services                        # 服务api
+|-- fonts                             # 字体
+|-- components                      # 组件目录
+|   |-- loading
+|   |   |-- index.js
+|   |   |-- index.scss
+|   |   |-- __tests__               
+|   |   |   |-- xx.js
+|-- actions
+|   |   |-- index.js
+|   |   |-- __tests__               
+|   |   |   |-- xx.js
+|-- reducers 
+|   |-- index.js
+|   |-- __tests__               
+|   |   |-- xx.js
+|   |-- xx.js 
+|-- styles                             # 公共CSS目录
+|   |-- common.scss
+|-- img                             # 公共图片目录
+|   |-- xx.png
+tests                               # 其他测试文件
+app.html                    # 入口页
+app.js                      # 入口JS
+package.json                        
+READNE.md
+</code></pre><h3 id="要完成的任务"><a href="#要完成的任务" class="headerlink" title="要完成的任务"></a>要完成的任务</h3><ol>
 <li>编译 jsx、es6、scss 等资源编译 </li>
 <li>自动引入静态资源到相应 html 页面</li>
 <li>实时编译和刷新浏览器</li>
@@ -205,9 +240,9 @@
 <li>全局替换指定字符串</li>
 <li>本地接口模拟服务</li>
 </ol>
-<p>###本文使用的boilerplate，项目地址：<a href="https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate" target="_blank" rel="external">webpack-react-redux-es6-boilerplate</a>，在此基础上，增添了自己的需求，适合本项目。</p>
-<p>###根据<a href="http://webpack.github.io/docs/" target="_blank" rel="external">webpack</a>文档，编写webpack配置，并且使用NODE API的方式<br>    /<em> webpack.config.js </em>/</p>
-<pre><code>var webpack = require(&apos;webpack&apos;);
+<h3 id="本文使用的boilerplate，项目地址：webpack-react-redux-es6-boilerplate，在此基础上，增添了自己的需求，适合本项目。"><a href="#本文使用的boilerplate，项目地址：webpack-react-redux-es6-boilerplate，在此基础上，增添了自己的需求，适合本项目。" class="headerlink" title="本文使用的boilerplate，项目地址：webpack-react-redux-es6-boilerplate，在此基础上，增添了自己的需求，适合本项目。"></a>本文使用的boilerplate，项目地址：<a href="https://github.com/xiaoyann/webpack-react-redux-es6-boilerplate" target="_blank" rel="external">webpack-react-redux-es6-boilerplate</a>，在此基础上，增添了自己的需求，适合本项目。</h3><h3 id="根据webpack文档，编写webpack配置，并且使用NODE-API的方式"><a href="#根据webpack文档，编写webpack配置，并且使用NODE-API的方式" class="headerlink" title="根据webpack文档，编写webpack配置，并且使用NODE API的方式"></a>根据<a href="http://webpack.github.io/docs/" target="_blank" rel="external">webpack</a>文档，编写webpack配置，并且使用NODE API的方式</h3><pre><code>/* webpack.config.js */
+
+var webpack = require(&apos;webpack&apos;);
 
 // 辅助函数
 var utils = require(&apos;./utils&apos;);
