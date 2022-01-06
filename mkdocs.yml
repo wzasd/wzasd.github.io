@@ -1,0 +1,100 @@
+site_name: wzasd's world 
+# repo_url: https://github.com/wzasd
+# repo_name: Jeffrey.wang
+copyright: '&copy; 2021 Jeffrey'
+theme:
+  icon:
+    repo: fontawesome/brands/git-alt
+  slate:
+    scheme: default
+  name: material
+  palette:
+    - scheme: default
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    code: Roboto Mono 
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/wzasd
+    - icon: material/email
+      link: jeffrey@outlook.com
+  disqus: 'Jeffrey wang'
+  manifest: manifest.webmanifest
+
+google_analytics:
+  - 'G-WS2CMEHX28'
+  - 'auto'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section for reference
+      title: Table of contents
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.superfences 
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
