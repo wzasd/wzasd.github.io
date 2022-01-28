@@ -13,7 +13,7 @@ doCommit() {
     echo ">>>>>>> copying CNAME & README.md"
     
     cp README.md site/
-    cp CNAME site/
+    # cp CNAME site/
     cp $baidu_verify site/
 
     echo ">>>>>>> build in mkdocs branch success"
