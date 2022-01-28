@@ -52,7 +52,7 @@ extra:
   manifest: manifest.webmanifest
   analytics:
     provider: google
-    property: G-WS2CMEHX28
+    property: G-Q6FXPH6HVX
 
 markdown_extensions:
   - abbr
