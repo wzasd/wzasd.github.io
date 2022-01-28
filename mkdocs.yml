@@ -46,10 +46,6 @@ extra:
     provider: google
     property: G-WS2CMEHX28
 
-google_analytics:
-  - 'G-WS2CMEHX28'
-  - 'auto'
-
 markdown_extensions:
   - abbr
   - admonition
