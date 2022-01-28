@@ -10,32 +10,63 @@
 1. 在master分支上进行blog的写作
 2. 调用`serve.sh`脚本进行本地预览
 3. 写作完毕后先提交到repo
-4. 通过 github 的 Ci 直接部署到 iO page 即可
+4. 通过 github 的 ci 直接部署到 iO page 即可
 
 ### 常见问题
 
 1. 操作流程
-    - fork项目或者随便怎么样
-    - 安装python环境、pip之后跟随[Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)进行安装
-    - 执行`mkdocs serve --dirtyreload`进行写作时的动态预览
+   - fork项目或者随便怎么样
+   - 安装python环境、pip之后跟随[Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)进行安装
+   - 执行`mkdocs serve --dirtyreload`进行写作时的动态预览
 
-2. FAQ
+2.创建 CI 的脚本
+
+   - 选择 Github 首页 Actions 的选项
+
+     - 选择 `New workflow`
+     - 复制代码
+     - 讲 `github.io` Pages 设置成 `gh-deploy`分支
+     - 每次推送 master 都会执行 ci 部署到 io 页
+
+     ```shell
+     name: ci 
+     on:
+       push:
+         branches:
+           - master 
+     jobs:
+       deploy:
+         runs-on: ubuntu-latest
+         steps:
+           - uses: actions/checkout@v2
+           - uses: actions/setup-python@v2
+             with:
+               python-version: 3.x
+           - run: pip install mkdocs-material 
+           - run: mkdocs gh-deploy --force
+     ```
+
+3. FAQ
 
 **若出现如下报错**：
 
 ```
 Config value: 'plugins'. Error: The "git-revision-date-localized" plugin is not installed
 ```
+
 请查阅对应repo上面的安装介绍[https://github.com/timvink/mkdocs-git-revision-date-localized-plugin](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin)  
 目前来看，安装即可`mkdocs-git-revision-date-localized-plugin`即可  
 
 **下面的问题同样是插件问题**：
+
 ```
 Config value: 'plugins'. Error: The "minify" plugin is not installed
 ```
+
 执行`pip install mkdocs-minify-plugin`安装插件
 
 **执行`mkdocs serve`时出错**：
+
 ```
 ERROR   -  Error reading page 'android\3rd-library\glide1.md': 'NoneType' object has no attribute 'end'
 ...
@@ -45,6 +76,7 @@ AttributeError: 'NoneType' object has no attribute 'end'
 ```
 
 仔细看堆栈时markdown插件报错，将其降级到3.2.1版本即可：
+
 ```shell
 pip uninstall markdown
 pip install -v markdown==3.2.1
