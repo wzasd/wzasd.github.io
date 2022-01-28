@@ -17,7 +17,7 @@ doCommit() {
 
     echo "pushing urls to baidu"
 
-    curl -H 'Content-Type:text/plain' --data-binary "@$url_txt" "http://data.zz.baidu.com/urls?site=https://wzasd.github.io&token=gv0ua2vUtIH0z7bt"
+    curl -H 'Content-Type:text/plain' --data-binary "@$url_txt" "http://data.zz.baidu.com/urls?site=https://blog.founicy.top&token=gv0ua2vUtIH0z7bt"
 
     echo "push completed."
 
