@@ -1,13 +1,14 @@
 site_name: wzasd's world 
 # repo_url: https://github.com/wzasd
 # repo_name: Jeffrey.wang
-copyright: '&copy; 2021 wzasd'
+copyright: 'Copyright &copy; 2015 - 2021 wzasd'
 theme:
   icon:
     repo: fontawesome/brands/git-alt
   slate:
     scheme: default
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: white
