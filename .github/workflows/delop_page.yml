@@ -15,3 +15,4 @@ jobs:
       - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install mkdocs-minify-plugin
       - run: mkdocs gh-deploy --force
+      - run: ./push2baidu.sh
