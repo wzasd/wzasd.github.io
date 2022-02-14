@@ -157,6 +157,7 @@ nav:
       - android/framework/binder1-mediaservice.md
       - android/framework/binder2.md
     - 杂记:
+      - android/other/LocalSocket，Socket Websocket Http,P2P等网络编程(步骤)（Demo）.md
       - android/other/commands.md
       - android/other/android-tv.md
       - android/other/annotation.md
